@@ -38,9 +38,12 @@ class _ProductCategoryDetailedScreenState extends State<ProductCategoryDetailedS
 
   @override
   Widget build(BuildContext context) {
+    ThemeData getTheme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.productCategory),
+        backgroundColor: getTheme.canvasColor,
+        elevation: 0,
       ),
       body: SafeArea(
         child: Padding(

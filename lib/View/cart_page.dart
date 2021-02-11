@@ -36,13 +36,1023 @@ class _CartPageState extends State<CartPage> {
           child: Column(
             children: <Widget>[
               Expanded(
-                flex: 4,
+                flex: 5,
                 child: Container(
                   width: double.infinity,
                   margin: EdgeInsets.symmetric(vertical: 5.0),
                   child: SingleChildScrollView(
                     child: Column(
                       children: <Widget>[
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Stack(
+                              children: [
+                                IntrinsicHeight(
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        margin: EdgeInsets.only(right: 15.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(15.0),
+                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
+                                              fit: BoxFit.contain),
+                                        ),
+                                      ),
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jade Plant",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "\u20B9 30",
+                                            style: getTheme.textTheme.subtitle1,
+                                          ),
+                                          Text(
+                                            "Total: \u20B9 $productTotal",
+                                            style: getTheme.textTheme.caption,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Icon(
+                                    Icons.delete,
+                                    size: 16,
+                                  ),
+                                ),
+                                Positioned(
+                                  bottom: 0,
+                                  right: 0,
+                                  child: Row(
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.accentColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.remove,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            if (productQuantity == 1) return;
+                                            productQuantity--;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill -= productTotal;
+                                          });
+                                        },
+                                      ),
+                                      Text(
+                                        "  $productQuantity  ",
+                                        style: getTheme.textTheme.subtitle1,
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(50),
+                                            color: getTheme.primaryColor.withOpacity(0.5),
+                                          ),
+                                          child: Icon(
+                                            Icons.add,
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            productQuantity++;
+                                            productTotal = productQuantity * productPrice;
+                                            totalBill += productTotal;
+                                          });
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                         Card(
                           elevation: 5.0,
                           child: Padding(
@@ -186,26 +1196,26 @@ class _CartPageState extends State<CartPage> {
                           ],
                         ),
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 5),
+                          margin: EdgeInsets.only(top: 8),
                           child: IntrinsicHeight(
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Container(
-                                  width: getMediaQ.width * 0.45,
+                                  width: getMediaQ.width * 0.40,
                                   decoration: BoxDecoration(
                                     color: getTheme.primaryColor,
-                                    borderRadius: BorderRadius.circular(8),
+                                    borderRadius: BorderRadius.circular(4),
                                   ),
                                   child: GestureDetector(
                                     child: Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 2.0),
+                                      padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 2.0),
                                       child: Center(
                                         child: Text(
                                           "Continue Shopping",
                                           textAlign: TextAlign.center,
-                                          style: getTheme.textTheme.subtitle1,
+                                          style: getTheme.textTheme.caption.copyWith(color: Colors.white),
                                         ),
                                       ),
                                     ),
@@ -217,17 +1227,17 @@ class _CartPageState extends State<CartPage> {
                                   ),
                                 ),
                                 Container(
-                                  width: getMediaQ.width * 0.45,
+                                  width: getMediaQ.width * 0.40,
                                   decoration: BoxDecoration(
                                     color: getTheme.primaryColor,
-                                    borderRadius: BorderRadius.circular(8),
+                                    borderRadius: BorderRadius.circular(4),
                                   ),
                                   child: GestureDetector(
                                     child: Center(
                                       child: Text(
                                         "Place Order",
                                         textAlign: TextAlign.center,
-                                        style: getTheme.textTheme.subtitle1,
+                                        style: getTheme.textTheme.caption.copyWith(color: Colors.white),
                                       ),
                                     ),
                                   ),
