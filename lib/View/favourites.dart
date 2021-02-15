@@ -76,7 +76,7 @@ class _FavouritesState extends State<Favourites> {
                         Positioned(
                           top: 0,
                           right: 0,
-                          child: Icon(Icons.favorite),
+                          child: Icon(Icons.highlight_remove_outlined),
                         ),
                         Positioned(
                           bottom: 0,
@@ -89,7 +89,7 @@ class _FavouritesState extends State<Favourites> {
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                                child: Text("Add"),
+                                child: Text("Buy"),
                               ),
                             ),
                           ),

@@ -215,7 +215,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
                         children: [
                           Text(
                             "XXXXXX",
-                            style: getTheme.textTheme.headline6.copyWith(color: Colors.grey),
+                            style: getTheme.textTheme.subtitle1.copyWith(color: Colors.grey),
                           ),
                           GestureDetector(
                             child: Text("Change"),

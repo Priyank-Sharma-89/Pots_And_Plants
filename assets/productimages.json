@@ -3,72 +3,84 @@
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/1.png",
     "name": "Jade Plant",
-    "price": 64
+    "price": 64,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/4.png",
     "name": "African Violet",
-    "price": 18
+    "price": 18,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/3.png",
     "name": "Peace Lily",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/1.png",
     "name": "Chinese Evergreen",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/4.png",
     "name": "English Ivy",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/3.png",
     "name": "Parlor Palm",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/1.png",
     "name": "Snake Plant",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/4.png",
     "name": "Gerber Daisy",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/3.png",
     "name": "Cactus",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/1.png",
     "name": "Warneck Dracaena",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/4.png",
     "name": "Ming Aralia",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   },
   {
     "category": "Indoor",
     "image": "https://www.pots-plants.com/assets/img/product/3.png",
     "name": "Spider Plant",
-    "price": 76
+    "price": 76,
+    "isFavourite": false
   }
 ]
