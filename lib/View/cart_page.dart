@@ -1202,42 +1202,47 @@ class _CartPageState extends State<CartPage> {
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                Container(
-                                  width: getMediaQ.width * 0.40,
-                                  decoration: BoxDecoration(
-                                    color: getTheme.primaryColor,
-                                    borderRadius: BorderRadius.circular(4),
-                                  ),
-                                  child: GestureDetector(
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 2.0),
-                                      child: Center(
-                                        child: Text(
-                                          "Continue Shopping",
-                                          textAlign: TextAlign.center,
-                                          style: getTheme.textTheme.caption.copyWith(color: Colors.white),
+                                Expanded(
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: getTheme.primaryColor,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: GestureDetector(
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 2.0),
+                                        child: Center(
+                                          child: Text(
+                                            "Continue Shopping",
+                                            textAlign: TextAlign.center,
+                                            style: getTheme.textTheme.subtitle1.copyWith(color: Colors.white),
+                                          ),
                                         ),
                                       ),
+                                      onTap: () {
+                                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                                          return HomePage();
+                                        }));
+                                      },
                                     ),
-                                    onTap: () {
-                                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-                                        return HomePage();
-                                      }));
-                                    },
                                   ),
                                 ),
-                                Container(
-                                  width: getMediaQ.width * 0.40,
-                                  decoration: BoxDecoration(
-                                    color: getTheme.primaryColor,
-                                    borderRadius: BorderRadius.circular(4),
-                                  ),
-                                  child: GestureDetector(
-                                    child: Center(
-                                      child: Text(
-                                        "Place Order",
-                                        textAlign: TextAlign.center,
-                                        style: getTheme.textTheme.caption.copyWith(color: Colors.white),
+                                SizedBox(
+                                  width: 8.0,
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: getTheme.primaryColor,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: GestureDetector(
+                                      child: Center(
+                                        child: Text(
+                                          "Place Order",
+                                          textAlign: TextAlign.center,
+                                          style: getTheme.textTheme.subtitle1.copyWith(color: Colors.white),
+                                        ),
                                       ),
                                     ),
                                   ),
