@@ -10,13 +10,15 @@ class ProductDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ThemeData theme = Theme.of(context);
+    ThemeData getTheme = Theme.of(context);
     return Scaffold(
       backgroundColor: Color(0xFFf0faf4),
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
+        // iconTheme: IconThemeData(
+        //   color: Colors.white,
+        // ),
+        backgroundColor: Color(0xFFf0faf4),
+        elevation: 0,
         actions: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -27,16 +29,17 @@ class ProductDetailPage extends StatelessWidget {
         ],
       ),
       body: Container(
-        width: double.infinity,
         height: double.infinity,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Container(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(productName, textAlign: TextAlign.left, style: theme.textTheme.headline2),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(productName, style: getTheme.textTheme.headline4.copyWith(color: Colors.black)),
+                ),
                 IntrinsicHeight(
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -90,7 +93,7 @@ class ProductDetailPage extends StatelessWidget {
                       children: [
                         Text(
                           "Category",
-                          style: theme.textTheme.caption,
+                          style: getTheme.textTheme.caption,
                         ),
                         Text(
                           "Indoor",
@@ -107,7 +110,7 @@ class ProductDetailPage extends StatelessWidget {
                       children: [
                         Text(
                           "Family",
-                          style: theme.textTheme.caption,
+                          style: getTheme.textTheme.caption,
                         ),
                         Text(
                           "Cactus",
@@ -124,7 +127,7 @@ class ProductDetailPage extends StatelessWidget {
                       children: [
                         Text(
                           "Soil",
-                          style: theme.textTheme.caption,
+                          style: getTheme.textTheme.caption,
                         ),
                         Text(
                           "Potting Mix",
@@ -158,14 +161,14 @@ class ProductDetailPage extends StatelessWidget {
                         "This type of cactus is most in demand "
                         "because of its simple shape. This cactus can also "
                         "survive outdoors.",
-                        style: theme.textTheme.caption,
+                        style: getTheme.textTheme.caption,
                       ),
                     ),
                   ],
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: theme.primaryColor.withOpacity(0.3),
+                    color: getTheme.primaryColor.withOpacity(0.3),
                     borderRadius: BorderRadius.circular(10),
                     // border: Border.all(
                     //   color: Colors.grey,
@@ -198,23 +201,17 @@ class ProductDetailPage extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: theme.primaryColor,
-                    borderRadius: BorderRadius.circular(30),
-                    border: Border.all(
-                      color: Colors.grey,
-                    ),
+                    color: getTheme.primaryColor,
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  width: double.infinity,
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 32),
                     child: GestureDetector(
                       child: Text(
                         "Add to Cart",
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: getTheme.textTheme.subtitle1.copyWith(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
                         ),
                       ),
                     ),
