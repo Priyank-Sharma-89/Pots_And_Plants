@@ -34,9 +34,8 @@ class _UserRegistrationPageState extends State<UserRegistrationPage> {
     ThemeData getTheme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
+        backgroundColor: getTheme.canvasColor,
+        elevation: 0,
       ),
       body: Stack(
         children: <Widget>[
@@ -55,7 +54,7 @@ class _UserRegistrationPageState extends State<UserRegistrationPage> {
                   Container(
                     child: Text(
                       "Create Account",
-                      style: getTheme.textTheme.headline1,
+                      style: getTheme.textTheme.headline4,
                     ),
                     margin: EdgeInsets.symmetric(vertical: 15.0),
                   ),
