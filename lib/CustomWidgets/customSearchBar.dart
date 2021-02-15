@@ -15,7 +15,7 @@ class CustomSearchBar extends StatelessWidget {
     return SizedBox(
       height: 45,
       child: Container(
-        margin: EdgeInsets.only(top: 6.0),
+        margin: EdgeInsets.only(top: 4.0),
         decoration: BoxDecoration(
           color: backgroundColor ?? Colors.transparent,
           border: Border.all(
