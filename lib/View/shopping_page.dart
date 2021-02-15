@@ -18,7 +18,7 @@ class _ShoppingPageState extends State<ShoppingPage> {
         title: CustomSearchBar(
           backgroundColor: Color(0xFFfcfcfb),
           borderColor: getTheme.primaryColor,
-          borderRadius: 15.0,
+          borderRadius: 8.0,
           hintTextColor: Colors.grey,
           prefixIconColor: getTheme.primaryColor,
         ),
