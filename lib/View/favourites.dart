@@ -102,6 +102,322 @@ class _FavouritesState extends State<Favourites> {
                     ),
                   ),
                 ),
+                Card(
+                  elevation: 2.0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Stack(
+                      children: [
+                        IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Container(
+                                width: 100,
+                                margin: EdgeInsets.only(right: 15.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: AspectRatio(
+                                    aspectRatio: 1 / 1.2,
+                                    child: Image.network(
+                                        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yucca-cane-plant-in-a-pot-on-a-white-background-royalty-free-image-1580856558.jpg",
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Jade Plant",
+                                    style: getTheme.textTheme.subtitle1,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "\u20B9 30",
+                                        style: getTheme.textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
+                                      ),
+                                      SizedBox(
+                                        width: 5.0,
+                                      ),
+                                      Text(
+                                        "\u20B9 45",
+                                        style: TextStyle(
+                                          decoration: TextDecoration.lineThrough,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          right: 0,
+                          child: Icon(Icons.highlight_remove_outlined),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: GestureDetector(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: getTheme.primaryColor),
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                                child: Text("Buy"),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  elevation: 2.0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Stack(
+                      children: [
+                        IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Container(
+                                width: 100,
+                                margin: EdgeInsets.only(right: 15.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: AspectRatio(
+                                    aspectRatio: 1 / 1.2,
+                                    child: Image.network(
+                                        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yucca-cane-plant-in-a-pot-on-a-white-background-royalty-free-image-1580856558.jpg",
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Jade Plant",
+                                    style: getTheme.textTheme.subtitle1,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "\u20B9 30",
+                                        style: getTheme.textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
+                                      ),
+                                      SizedBox(
+                                        width: 5.0,
+                                      ),
+                                      Text(
+                                        "\u20B9 45",
+                                        style: TextStyle(
+                                          decoration: TextDecoration.lineThrough,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          right: 0,
+                          child: Icon(Icons.highlight_remove_outlined),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: GestureDetector(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: getTheme.primaryColor),
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                                child: Text("Buy"),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  elevation: 2.0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Stack(
+                      children: [
+                        IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Container(
+                                width: 100,
+                                margin: EdgeInsets.only(right: 15.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: AspectRatio(
+                                    aspectRatio: 1 / 1.2,
+                                    child: Image.network(
+                                        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yucca-cane-plant-in-a-pot-on-a-white-background-royalty-free-image-1580856558.jpg",
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Jade Plant",
+                                    style: getTheme.textTheme.subtitle1,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "\u20B9 30",
+                                        style: getTheme.textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
+                                      ),
+                                      SizedBox(
+                                        width: 5.0,
+                                      ),
+                                      Text(
+                                        "\u20B9 45",
+                                        style: TextStyle(
+                                          decoration: TextDecoration.lineThrough,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          right: 0,
+                          child: Icon(Icons.highlight_remove_outlined),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: GestureDetector(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: getTheme.primaryColor),
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                                child: Text("Buy"),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  elevation: 2.0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Stack(
+                      children: [
+                        IntrinsicHeight(
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Container(
+                                width: 100,
+                                margin: EdgeInsets.only(right: 15.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  child: AspectRatio(
+                                    aspectRatio: 1 / 1.2,
+                                    child: Image.network(
+                                        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yucca-cane-plant-in-a-pot-on-a-white-background-royalty-free-image-1580856558.jpg",
+                                        fit: BoxFit.cover),
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Jade Plant",
+                                    style: getTheme.textTheme.subtitle1,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "\u20B9 30",
+                                        style: getTheme.textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
+                                      ),
+                                      SizedBox(
+                                        width: 5.0,
+                                      ),
+                                      Text(
+                                        "\u20B9 45",
+                                        style: TextStyle(
+                                          decoration: TextDecoration.lineThrough,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          right: 0,
+                          child: Icon(Icons.highlight_remove_outlined),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: GestureDetector(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: getTheme.primaryColor),
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                                child: Text("Buy"),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

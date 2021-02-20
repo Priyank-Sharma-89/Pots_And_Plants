@@ -36,7 +36,7 @@ class _CarouselImagesState extends State<CarouselImages> {
     return CarouselSlider(
       options: CarouselOptions(
         viewportFraction: 1.0,
-        height: 180.0,
+        height: 210.0,
         initialPage: 0,
         enlargeCenterPage: false,
         autoPlay: true,

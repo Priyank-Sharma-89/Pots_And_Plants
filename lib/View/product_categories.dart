@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:octo_image/octo_image.dart';
 import 'package:pots_n_plants/CustomWidgets/custom_drawer.dart';
 
 class ProductCategories extends StatelessWidget {
@@ -23,8 +25,11 @@ class ProductCategories extends StatelessWidget {
               return Stack(
                 children: [
                   Positioned.fill(
-                    child: Image.network(
-                      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/an-alocasia-plant-in-a-green-pot-on-wooden-table-royalty-free-image-1132823763-1551727929.jpg',
+                    child: OctoImage.fromSet(
+                      image: CachedNetworkImageProvider(
+                          "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/an-alocasia-plant-in-a-green-pot-on-wooden-table-royalty-free-image-1132823763-1551727929.jpg"),
+                      octoSet: OctoSet.blurHash(
+                          'L6Pj42jE.AyE_3t7t7R**0o#DgR4'), // find blurhash string from https://blurha.sh/
                       fit: BoxFit.fill,
                     ),
                   ),

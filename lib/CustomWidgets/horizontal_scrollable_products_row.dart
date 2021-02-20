@@ -129,7 +129,7 @@ class _HorizontalScrollableProductRowState extends State<HorizontalScrollablePro
                     child: GestureDetector(
                       child: Icon(
                         productImage.isFavourite == false ? Icons.favorite_border_outlined : Icons.favorite,
-                        color: productImage.isFavourite == false ? Colors.black : Colors.red,
+                        color: productImage.isFavourite == false ? Colors.lightGreen : Colors.red,
                       ),
                       onTap: () {
                         setState(() {
