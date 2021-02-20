@@ -29,7 +29,7 @@ class _ShoppingPageState extends State<ShoppingPage> {
       body: SafeArea(
         child: Container(
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 4),
             child: ListView(
               children: [
                 CarouselImages(),

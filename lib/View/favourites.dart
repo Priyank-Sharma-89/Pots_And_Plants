@@ -38,8 +38,12 @@ class _FavouritesState extends State<Favourites> {
                                 margin: EdgeInsets.only(right: 15.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(15.0),
-                                  child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
-                                      fit: BoxFit.contain),
+                                  child: AspectRatio(
+                                    aspectRatio: 1 / 1.2,
+                                    child: Image.network(
+                                        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yucca-cane-plant-in-a-pot-on-a-white-background-royalty-free-image-1580856558.jpg",
+                                        fit: BoxFit.cover),
+                                  ),
                                 ),
                               ),
                               Column(
@@ -48,13 +52,13 @@ class _FavouritesState extends State<Favourites> {
                                 children: [
                                   Text(
                                     "Jade Plant",
-                                    style: getTheme.textTheme.headline6,
+                                    style: getTheme.textTheme.subtitle1,
                                   ),
                                   Row(
                                     children: [
                                       Text(
                                         "\u20B9 30",
-                                        style: getTheme.textTheme.subtitle1.copyWith(fontWeight: FontWeight.bold),
+                                        style: getTheme.textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
                                       ),
                                       SizedBox(
                                         width: 5.0,

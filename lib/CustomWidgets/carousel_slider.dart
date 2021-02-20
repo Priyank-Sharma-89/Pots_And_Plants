@@ -34,30 +34,9 @@ class _CarouselImagesState extends State<CarouselImages> {
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-      items: carouselImageList.map((carouselImg) {
-        return Builder(
-          builder: (BuildContext context) {
-            return Container(
-              width: double.infinity,
-              margin: EdgeInsets.symmetric(horizontal: 5.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: OctoImage.fromSet(
-                  image: CachedNetworkImageProvider("${carouselImg.imgURL}"),
-                  octoSet:
-                      OctoSet.blurHash('L6Pj42jE.AyE_3t7t7R**0o#DgR4'), // find blurhash string from https://blurha.sh/
-                  fit: BoxFit.fill,
-                  width: double.infinity,
-                  // height: 160,
-                ),
-              ),
-            );
-          },
-        );
-      }).toList(),
       options: CarouselOptions(
         viewportFraction: 1.0,
-        height: 150.0,
+        height: 180.0,
         initialPage: 0,
         enlargeCenterPage: false,
         autoPlay: true,
@@ -72,6 +51,26 @@ class _CarouselImagesState extends State<CarouselImages> {
           });
         },
       ),
+      items: carouselImageList.map((carouselImg) {
+        return Builder(
+          builder: (BuildContext context) {
+            return Container(
+              width: double.infinity,
+              margin: EdgeInsets.symmetric(horizontal: 2),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(4.0),
+                child: OctoImage.fromSet(
+                  image: CachedNetworkImageProvider("${carouselImg.imgURL}"),
+                  octoSet:
+                      OctoSet.blurHash('L6Pj42jE.AyE_3t7t7R**0o#DgR4'), // find blurhash string from https://blurha.sh/
+                  fit: BoxFit.fill,
+                  // width: double.infinity,
+                ),
+              ),
+            );
+          },
+        );
+      }).toList(),
     );
   }
 }

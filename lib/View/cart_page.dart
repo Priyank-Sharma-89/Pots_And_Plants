@@ -57,21 +57,32 @@ class _CartPageState extends State<CartPage> {
                                         margin: EdgeInsets.only(right: 15.0),
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.circular(15.0),
-                                          child: Image.network("https://www.pots-plants.com/assets/img/product/1.png",
-                                              fit: BoxFit.contain),
+                                          child: AspectRatio(
+                                            aspectRatio: 1 / 1.2,
+                                            child: Image.network(
+                                              "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/monstera-baby-plant-royalty-free-image-1133859657-1553276209.jpg",
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
                                         ),
                                       ),
                                       Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          Text(
-                                            "Jade Plant",
-                                            style: getTheme.textTheme.subtitle1,
-                                          ),
-                                          Text(
-                                            "\u20B9 30",
-                                            style: getTheme.textTheme.subtitle1,
+                                          Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Jade Plant",
+                                                style: getTheme.textTheme.subtitle1,
+                                              ),
+                                              Text(
+                                                "\u20B9 30",
+                                                style:
+                                                    getTheme.textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
+                                              ),
+                                            ],
                                           ),
                                           Text(
                                             "Total: \u20B9 $productTotal",

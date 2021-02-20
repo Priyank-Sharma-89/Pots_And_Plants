@@ -78,7 +78,7 @@ class _HorizontalScrollableProductRowState extends State<HorizontalScrollablePro
               ProductImage productImage = productImageList[index];
               return Container(
                 margin: EdgeInsets.symmetric(horizontal: 4.0),
-                width: getMediaQContext.size.width * 0.40,
+                width: getMediaQContext.size.width * 0.33,
                 child: Stack(children: [
                   Column(
                     children: [
@@ -103,8 +103,8 @@ class _HorizontalScrollableProductRowState extends State<HorizontalScrollablePro
                               octoSet: OctoSet.blurHash(
                                   'L6Pj42jE.AyE_3t7t7R**0o#DgR4'), // find blurhash string from https://blurha.sh/
                               fit: BoxFit.cover,
-                              width: double.infinity,
-                              height: 160,
+                              width: 90,
+                              height: 120,
                             ),
                           ),
                         ),
