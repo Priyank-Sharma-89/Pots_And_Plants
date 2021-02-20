@@ -16,26 +16,25 @@ class ProductCategories extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: GridView.count(
             crossAxisCount: 2,
+            crossAxisSpacing: 2,
+            mainAxisSpacing: 2,
             shrinkWrap: true,
             children: List.generate(4, (index) {
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Card(
-                    elevation: 10.0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
+              return Stack(
+                children: [
+                  Positioned.fill(
                     child: Image.network(
-                      'https://www.pots-plants.com/assets/img/product/1.png',
-                      fit: BoxFit.cover,
-                      height: 120,
-                      width: 150,
+                      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/an-alocasia-plant-in-a-green-pot-on-wooden-table-royalty-free-image-1132823763-1551727929.jpg',
+                      fit: BoxFit.fill,
                     ),
-                    clipBehavior: Clip.antiAlias,
                   ),
-                  Text(
-                    'Indoor Plants',
-                  )
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Text(
+                      'Indoor Plants',
+                    ),
+                  ),
                 ],
               );
             }),
