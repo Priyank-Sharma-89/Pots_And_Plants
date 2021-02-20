@@ -3,10 +3,8 @@ import 'dart:convert';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:octo_image/octo_image.dart';
 import 'package:pots_n_plants/Modal/productImage.dart';
-import 'package:pots_n_plants/View/product_detail_page.dart';
 
 class ProductCategoryDetailedScreen extends StatefulWidget {
   final String productCategory;
@@ -48,58 +46,88 @@ class _ProductCategoryDetailedScreenState extends State<ProductCategoryDetailedS
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-          child: StaggeredGridView.countBuilder(
-            crossAxisCount: 2,
+          child: ListView.builder(
             itemCount: productImageList.length,
             itemBuilder: (context, index) {
               ProductImage product = productImageList[index];
-              return GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ProductDetailPage(
-                        productName: product.name,
-                        productImage: product.imgURL,
-                        productPrice: product.price,
-                      ),
-                    ),
-                  );
-                },
-                child: Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(3),
-                        child: OctoImage.fromSet(
-                          image: CachedNetworkImageProvider("${product.imgURL}"),
-                          octoSet: OctoSet.blurHash(
-                              'L6Pj42jE.AyE_3t7t7R**0o#DgR4'), // find blurhash string from https://blurha.sh/
-                          fit: BoxFit.fill,
-                          // width: double.infinity,
-                          // height: 160,
+              return Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Stack(
+                    children: [
+                      IntrinsicHeight(
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Container(
+                              width: 100,
+                              margin: EdgeInsets.only(right: 15.0),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(15.0),
+                                child: AspectRatio(
+                                  aspectRatio: 1 / 1.2,
+                                  child: OctoImage.fromSet(
+                                    image: CachedNetworkImageProvider("${product.imgURL}"),
+                                    octoSet: OctoSet.blurHash(
+                                        'L6Pj42jE.AyE_3t7t7R**0o#DgR4'), // find blurhash string from https://blurha.sh/
+                                    // width: double.infinity,
+                                    // height: 160,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "${product.name}",
+                                  style: getTheme.textTheme.subtitle1,
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      "\u20B9 ${product.price}",
+                                      style: getTheme.textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
+                                    ),
+                                    SizedBox(
+                                      width: 5.0,
+                                    ),
+                                    Text(
+                                      "\u20B9 45",
+                                      style: TextStyle(
+                                        decoration: TextDecoration.lineThrough,
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                        // child: Image.network(
-                        //   '${product.imgURL}',
-                        //   fit: BoxFit.cover,
-                        //   // height: 120,
-                        //   width: double.infinity,
-                        // ),
                       ),
-                      Text(
-                        '${product.name}',
+                      Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: GestureDetector(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(color: getTheme.primaryColor),
+                              borderRadius: BorderRadius.all(Radius.circular(8)),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                              child: Text("Buy"),
+                            ),
+                          ),
+                        ),
                       ),
-                      Text(
-                        '\u20B9 ${product.price}',
-                      )
                     ],
                   ),
                 ),
               );
-            },
-            staggeredTileBuilder: (index) {
-              return StaggeredTile.count(1, index.isEven ? 1.3 : 1.3);
             },
           ),
         ),

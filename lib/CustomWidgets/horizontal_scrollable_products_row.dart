@@ -69,7 +69,7 @@ class _HorizontalScrollableProductRowState extends State<HorizontalScrollablePro
           ),
         ),
         Container(
-          height: getMediaQContext.size.height * 0.30,
+          height: getMediaQContext.size.height * 0.25,
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
@@ -78,7 +78,7 @@ class _HorizontalScrollableProductRowState extends State<HorizontalScrollablePro
               ProductImage productImage = productImageList[index];
               return Container(
                 margin: EdgeInsets.symmetric(horizontal: 4.0),
-                width: getMediaQContext.size.width * 0.33,
+                width: getMediaQContext.size.width * 0.35,
                 child: Stack(children: [
                   Column(
                     children: [
@@ -103,32 +103,29 @@ class _HorizontalScrollableProductRowState extends State<HorizontalScrollablePro
                               octoSet: OctoSet.blurHash(
                                   'L6Pj42jE.AyE_3t7t7R**0o#DgR4'), // find blurhash string from https://blurha.sh/
                               fit: BoxFit.cover,
-                              width: 90,
+                              width: double.infinity,
                               height: 120,
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 5.0),
+                        padding: const EdgeInsets.symmetric(vertical: 2.5),
                         child: Text(
                           "${productImage.name}",
                           textAlign: TextAlign.center,
                           style: getTheme.textTheme.caption,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 5.0),
-                        child: Text(
-                          "\u20B9 ${productImage.price}",
-                          style: getTheme.textTheme.subtitle1,
-                        ),
+                      Text(
+                        "\u20B9 ${productImage.price}",
+                        style: getTheme.textTheme.subtitle1.copyWith(fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
                   Positioned(
-                    right: 0,
-                    bottom: 40,
+                    right: 5,
+                    top: 0,
                     child: GestureDetector(
                       child: Icon(
                         productImage.isFavourite == false ? Icons.favorite_border_outlined : Icons.favorite,
