@@ -41,6 +41,7 @@ class CustomDrawer extends StatelessWidget {
                         leading: Icon(Icons.account_circle),
                         title: Text('My Profile'),
                         onTap: () => {
+                          Navigator.pop(context),
                           Navigator.push(context, MaterialPageRoute(builder: (context) {
                             return UserProfileScreen();
                           }))
